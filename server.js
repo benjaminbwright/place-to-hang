@@ -3,7 +3,7 @@ const app = express();
 
 const PORT = process.env.PORT || 4000;
 
-app.use(express.static("client/public"));
+app.use(express.static("client/build"));
 
 app.get("/api/stuff", (req, res) => {
   res.json({
