@@ -5,12 +5,6 @@ const PORT = process.env.PORT || 4000;
 
 app.use(express.static("client/build"));
 
-app.get("/api/stuff", (req, res) => {
-  res.json({
-    stuff: "Here is some stuff. Yo!!!",
-  });
-});
-
 app.get("*", (req, res) => {
   res.status(404).send("Page not found");
 });
