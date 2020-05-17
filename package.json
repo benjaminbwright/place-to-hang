@@ -15,7 +15,8 @@
     "test-dev": "concurrently \"nodemon server.js\" \"jest --watchAll\"",
     "start-dev": "concurrently \"nodemon server\" \"cd client && npm start\"",
     "test-react": "concurrently \"nodemon server\" \"cd client && npm test\"",
-    "lint": "eslint --quiet"
+    "lint": "eslint --quiet",
+    "heroku-postbuild": "cd client && npm build"
   },
   "author": "",
   "license": "ISC",
