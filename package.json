@@ -35,7 +35,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm start & npm run test && npm run lint && cd client && CI=true npm test"
+      "pre-commit": "CI=true npm start & npm run test && npm run lint && cd client && CI=true npm test"
     }
   }
 }
