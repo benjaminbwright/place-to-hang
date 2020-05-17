@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import hammockBackground from "./images/hammock-background.svg";
+import "./App.scss";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div id="welcome-login">
+        <div id="welcome-heading" className="heading">
+          <h1>A Place To Hang</h1>
+          <h2>know where to hang your hammock</h2>
+        </div>
+        <div id="login-button">
+          <button>Login</button>
+        </div>
+        <a href="#">Sign Up</a>
+        <img id="hammock-background" src={hammockBackground} />
+      </div>
     </div>
   );
 }
