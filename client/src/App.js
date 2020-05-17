@@ -1,37 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 import logo from './logo.svg';
-import axios from 'axios';
 import './App.css';
-
-function Header() {
-  const [state, setState] = useState({
-    stuff: "Some stuff"
-  });
-
-  async function getStuff() {
-    const { data } = await axios.get("/api/stuff");
-    const { stuff } = data;
-    setState({ stuff: stuff });
-  }
-
-  setTimeout(() => {
-    getStuff();
-  }, 5000);
-  
-
-  return (
-    <header>
-      <h2>This be the header biatch!!!!</h2>
-      <h3>{ state.stuff }</h3>
-    </header>
-  )
-}
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <button>Press this button to hang your hammock here.</button>
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
 }
