@@ -1,23 +1,16 @@
 import React from "react";
-import hammockBackground from "./images/hammock-background.svg";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Welcome from "./pages/Welcome";
 import "./App.scss";
 
-function App() {
+export default () => {
   return (
     <div className="App">
-      <div id="welcome-login">
-        <div id="welcome-heading" className="heading">
-          <h1>A Place To Hang</h1>
-          <h2>know where to hang your hammock</h2>
-        </div>
-        <div id="login-button">
-          <button>Login</button>
-        </div>
-        <a href="#">Sign Up</a>
-        <img id="hammock-background" src={hammockBackground} />
-      </div>
+      <Router>
+        <Route path="/">
+          <Welcome />
+        </Route>
+      </Router>
     </div>
   );
-}
-
-export default App;
+};
